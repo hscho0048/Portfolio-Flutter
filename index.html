@@ -12,5 +12,81 @@
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
+
+  <style>
+    #back-affordance{
+      position:fixed; top:16px; left:56px; z-index:2147483000;
+      display:none; align-items:center; gap:10px;
+      height:48px; min-width:104px; padding:0 20px; box-sizing:border-box;
+      border:1.5px solid #222832; border-radius:999px;
+      background:rgba(255,255,255,.92); backdrop-filter:blur(14px);
+      font:600 16px/1 A2Z,system-ui,sans-serif; color:#222832;
+      cursor:pointer; box-shadow:0 8px 24px rgba(34,40,50,.14);
+      opacity:0; transform:translateY(-6px);
+      transition:opacity .22s ease, transform .22s ease,
+                 background .16s ease, color .16s ease;
+    }
+    #back-affordance.on{ display:inline-flex; }
+    #back-affordance.show{ opacity:1; transform:translateY(0); }
+    #back-affordance:hover{ background:#222832; color:#E4E7EA; }
+    #back-affordance:hover svg{ stroke:#E4E7EA; }
+    #back-affordance:focus-visible{ outline:3px solid #8B5CF6; outline-offset:3px; }
+    @media (max-width:720px){ #back-affordance{ left:20px; } }
+    @media (prefers-color-scheme:dark){
+      #back-affordance{ background:rgba(18,22,28,.92); border-color:#E9ECF1; color:#E9ECF1; }
+      #back-affordance svg{ stroke:#E9ECF1; }
+    }
+  </style>
+  <button id="back-affordance" type="button" aria-label="뒤로">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+         stroke="#222832" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M11 18l-6-6 6-6"/>
+    </svg>
+    <span>뒤로</span>
+  </button>
+  <script>
+    (function () {
+      var el = document.getElementById('back-affordance');
+      var y = 0;                 // estimated scroll offset
+      var THRESHOLD = 90;        // original header is 80 tall
+
+      function onProject() { return /#\/project\//.test(location.hash); }
+
+      function render() {
+        var active = onProject();
+        el.classList.toggle('on', active);
+        el.classList.toggle('show', active && y > THRESHOLD);
+      }
+      function bump(d) { y = Math.max(0, y + d); render(); }
+
+      addEventListener('wheel', function (e) { bump(e.deltaY); }, { passive: true });
+
+      var ty = null;
+      addEventListener('touchstart', function (e) {
+        ty = e.touches[0].clientY;
+      }, { passive: true });
+      addEventListener('touchmove', function (e) {
+        if (ty !== null) { bump(ty - e.touches[0].clientY); ty = e.touches[0].clientY; }
+      }, { passive: true });
+
+      addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && onProject()) { el.click(); return; }
+        if (e.key === 'PageDown' || e.key === ' ') bump(600);
+        else if (e.key === 'PageUp') bump(-600);
+        else if (e.key === 'ArrowDown') bump(60);
+        else if (e.key === 'ArrowUp') bump(-60);
+        else if (e.key === 'End') bump(100000);
+        else if (e.key === 'Home') { y = 0; render(); }
+      });
+
+      el.addEventListener('click', function () {
+        if (history.length > 1) history.back();
+        else location.hash = '#/portfolio';
+      });
+
+      addEventListener('hashchange', function () { y = 0; render(); });
+      render();
+    })();
+  </script>
 </body>
 </html>

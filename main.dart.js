@@ -7815,7 +7815,7 @@ k2:function k2(a,b,c){this.a=a
 this.b=b
 this.c=c},
 aJc(a){var s=new A.alU(a),r=t.Cz
-s=A.Z(new A.b2(A.b([new A.iV("LANGUAGE",B.E0,s.$1("Language"),520),new A.iV("CLOUD",B.Ek,s.$1("Cloud"),270),new A.iV("AI / DATA",B.DU,s.$1("AI/Data"),330),new A.iV("MATERIALS",B.DN,s.$1("Materials"),560),new A.iV("WORKFLOW",B.E_,s.$1("ETC"),310)],t.wE),new A.alW(),r),r.h("l.E"))
+s=A.Z(new A.b2(A.b([new A.iV("CLOUD",B.Ek,s.$1("Cloud"),250),new A.iV("BACKEND",B.E0,s.$1("Backend"),540),new A.iV("DATABASE",B.DU,s.$1("Database"),450),new A.iV("LANGUAGE",B.E0,s.$1("Language"),500),new A.iV("AI / DATA",B.DU,s.$1("AI/Data"),320),new A.iV("WORKFLOW",B.E_,s.$1("ETC"),300),new A.iV("MATERIALS",B.DN,s.$1("Materials"),540)],t.wE),new A.alW(),r),r.h("l.E"))
 return s},
 ne(a){var s=0,r=A.V(t.H)
 var $async$ne=A.W(function(b,c){if(b===1)return A.S(c,r)
@@ -40803,10 +40803,10 @@ A.O.prototype={}
 A.es.prototype={}
 A.k2.prototype={}
 A.N3.prototype={
-H(a){var s=null,r=A.eu(B.n0,0,A.i6(14,"count",t.S),t.jT).cW(0),q=this.c,p=q?36:52
+H(a){var s=null,r=A.eu(B.n0,0,A.i6(21,"count",t.S),t.jT).cW(0),q=this.c,p=q?36:52
 return new A.ut(A.c0(A.b([new A.PJ(q,s),B.xN,new A.Qs(s),B.RT,new A.Tx(r,s)],t.p),B.aE,B.G,B.t),q,"01 \xb7 ABOUT","On the work.",!1,p,s)}}
 A.Qs.prototype={
-H(a){var s=null,r=A.b([new A.aq("12","projects shipped"),new A.aq("6","awards earned"),new A.aq("14+","tools in toolkit")],t.Wy),q=A.d4($.aa().a===B.e?B.O:B.P),p=A.c3(14)
+H(a){var s=null,r=A.b([new A.aq("12","projects shipped"),new A.aq("6","awards earned"),new A.aq("21+","tools in toolkit")],t.Wy),q=A.d4($.aa().a===B.e?B.O:B.P),p=A.c3(14)
 return A.b3(s,A.rj(new A.aht(r)),B.l,s,s,new A.aN(s,s,q,p,s,s,B.x),s,s,s,B.GH,s,s,s)}}
 A.aht.prototype={
 $2(a,b){var s,r,q,p,o,n=null
@@ -40907,7 +40907,7 @@ s=l.a===B.e?B.y:B.z
 j=A.at(j,r,r,r,A.au(r,r,s,r,r,r,r,r,r,r,r,q?56:120,r,r,B.n,r,0.95,!0,r,-3,r,r,r,r,r,r),r)
 s=A.cC(r,q?36:56,r)
 l=l.a===B.e?B.B:B.A
-return A.b3(r,A.dE(new A.d7(B.bq,A.c0(A.b([i,k,j,s,new A.d7(B.l7,A.at("Rust \uc2dc\uc2a4\ud15c, \ub124\ud2b8\uc6cc\ud06c \uc571, \ub370\uc2a4\ud06c\ud1b1 \ub3c4\uad6c \uad00\ub828 \ud611\uc5c5\uc744 \ud658\uc601\ud569\ub2c8\ub2e4. \uba54\uc77c\ub85c \uc5f0\ub77d \uc8fc\uc2dc\uba74 \ub2f5\uc2e0\ub4dc\ub9ac\uaca0\uc2b5\ub2c8\ub2e4.",r,r,r,A.au(r,r,l,r,r,r,r,r,r,r,r,q?16:18,r,r,B.n,r,1.6,!0,r,r,r,r,r,r,r,r),r),r),B.RR,A.l6(A.b([new A.uk("chohosung27@gmail.com",new A.aeR(),r),new A.pI("82-10-9757-0148",new A.aeS(),r),new A.pI("GitHub",new A.aeT(),r)],h),B.bD,14,14)],h),B.Y,B.G,B.t),r),r,r),B.l,r,r,r,r,r,r,new A.aE(p,o,n,m),r,r,1/0)}}
+return A.b3(r,A.dE(new A.d7(B.bq,A.c0(A.b([i,k,j,s,new A.d7(B.l7,A.at("\ubc31\uc5d4\ub4dc\uc640 \ub370\uc774\ud130 \ud50c\ub7ab\ud3fc \uad00\ub828 \ud611\uc5c5\uc744 \ud658\uc601\ud569\ub2c8\ub2e4. \uba54\uc77c\ub85c \uc5f0\ub77d \uc8fc\uc2dc\uba74 \ub2f5\uc2e0\ub4dc\ub9ac\uaca0\uc2b5\ub2c8\ub2e4.",r,r,r,A.au(r,r,l,r,r,r,r,r,r,r,r,q?16:18,r,r,B.n,r,1.6,!0,r,r,r,r,r,r,r,r),r),r),B.RR,A.l6(A.b([new A.uk("chohosung27@gmail.com",new A.aeR(),r),new A.pI("82-10-9757-0148",new A.aeS(),r),new A.pI("GitHub",new A.aeT(),r)],h),B.bD,14,14)],h),B.Y,B.G,B.t),r),r,r),B.l,r,r,r,r,r,r,new A.aE(p,o,n,m),r,r,1/0)}}
 A.aeR.prototype={
 $0(){return A.ne(A.n4(null,"chohosung27@gmail.com",null,"mailto"))},
 $S:0}
@@ -40943,13 +40943,13 @@ p=A.b3(j,j,B.l,q?B.B:B.A,j,j,j,1,j,j,j,j,24)
 o=t.p
 p=A.bL(A.b([p,B.bj,A.at("PORTFOLIO \xb7 2026",j,j,j,A.au(j,j,q?B.B:B.A,j,j,j,j,j,j,j,j,11,j,j,B.n,j,j,!0,j,3,j,j,j,j,j,j),j)],o),B.E,B.at)
 q=A.cC(j,g?20:28,j)
-n=g?"Rust for\nthe big\ndata era.":"Building Rust\nsystems for the\nbig-data era."
+n=g?"Backend for\nthe big\ndata era.":"Building reliable\nbackend systems for\ndata-heavy products."
 m=r.a===B.e?B.y:B.z
 l=g?44:96
 l=A.at(n,j,j,j,A.au(j,j,m,j,j,j,j,j,j,j,j,l,j,j,B.n,j,0.98,!0,j,0,j,j,j,A.M1(),j,j),j)
 n=A.cC(j,g?22:32,j)
 m=(r.a===B.e?B.y:B.z).a4(0.78)
-r=A.at("\uc870\ud638\uc131 \u2014 Rust \uac1c\ubc1c\uc790. \ube45\ub370\uc774\ud130 \uc2dc\ub300\uc5d0 \ud544\uc694\ud55c \uc548\uc815\uc801\uc778 \ub124\ud2b8\uc6cc\ud06c \uc571\uacfc \ubc31\uc5d4\ub4dc \ub7f0\ud0c0\uc784\uc744 \ub9cc\ub4ed\ub2c8\ub2e4.",j,j,j,A.au(j,j,m,j,j,j,j,j,j,j,j,g?15:18,j,j,B.n,j,1.6,!0,j,j,j,j,j,j,j,j),j)
+r=A.at("\uc870\ud638\uc131 \u2014 \ub370\uc774\ud130\uac00 \ub9ce\uc774 \uc624\uac00\ub294 \uc11c\ube44\uc2a4\uc758 \ubc31\uc5d4\ub4dc\ub97c \ub9cc\ub4dc\ub294 \uc5d4\uc9c0\ub2c8\uc5b4\uc785\ub2c8\ub2e4.",j,j,j,A.au(j,j,m,j,j,j,j,j,j,j,j,g?15:18,j,j,B.n,j,1.6,!0,j,j,j,j,j,j,j,j),j)
 r=A.b([A.h1(A.c0(A.b([p,q,l,n,new A.d7(B.l7,r,j),A.cC(j,g?28:40,j),A.l6(A.b([new A.uk("See selected work",k.e,j),new A.pI("Get in touch",k.f,j)],o),B.bD,14,14)],o),B.Y,B.rY,B.t),1)],o)
 if(!g)r.push(new A.SQ(j))
 return A.cC(A.fK(B.aV,A.b([f,A.kI(80,A.dE(new A.d7(B.bq,A.bL(r,B.co,B.t),j),j,j),j,j,e,s,h,j),A.kI(0,new A.Dl(j),j,j,0,0,j,j)],o),B.a1,B.hm),i,j)}}
@@ -41098,7 +41098,7 @@ A.PQ.prototype={
 H(a){var s=null,r=A.l6(B.L5,B.bD,10,10),q=this.c,p=A.cC(s,q?22:30,s),o=$.aa(),n=o.a===B.e?B.y:B.z,m=q?34:52
 m=A.at("\uc870\ud638\uc131",s,s,s,A.au(s,s,n,s,s,s,s,s,s,s,s,m,s,s,B.n,s,0.95,!0,s,-0.8,s,s,s,A.M1(),s,s),s)
 o=o.a===B.e?B.y:B.z
-o=A.at("\ube45\ub370\uc774\ud130 \uc2dc\ub300\uc758 \ud2b8\ub798\ud53d\uacfc \ub370\uc774\ud130\ub97c \uc548\uc815\uc801\uc73c\ub85c \ub2e4\ub8e8\ub294 Rust \uc2dc\uc2a4\ud15c\uc744 \ub9cc\ub4ed\ub2c8\ub2e4.",s,s,s,A.au(s,s,o,s,s,s,s,s,s,s,s,q?19:25,s,s,B.n,s,1.38,!0,s,-0.2,s,s,s,s,s,s),s)
+o=A.at("\ubd84\uc0b0 \uc2dc\uc2a4\ud15c\uacfc \ud074\ub77c\uc6b0\ub4dc \uc704\uc5d0 \uc11c\ube44\uc2a4\ub97c \uc62c\ub9ac\uace0 \uc624\ub798 \ubc84\ud2f0\uac8c \ud569\ub2c8\ub2e4.",s,s,s,A.au(s,s,o,s,s,s,s,s,s,s,s,q?19:25,s,s,B.n,s,1.38,!0,s,-0.2,s,s,s,s,s,s),s)
 n=A.cC(s,q?24:34,s)
 return A.c0(A.b([r,p,m,B.hl,new A.d7(B.zP,o,s),n,new A.tZ(B.Hh,"Email","chohosung27@gmail.com",new A.agp(),s),new A.tZ(B.Hg,"Phone","82-10-9757-0148",new A.agq(),s),new A.tZ(B.fz,"GitHub","github.com/hscho0048",new A.agr(),s),A.cC(s,q?22:30,s),new A.Uk(s)],t.p),B.Y,B.G,B.t)}}
 A.agp.prototype={
@@ -41414,7 +41414,7 @@ r=c.a===B.e?B.y:B.z
 r=A.at("\uc870\ud638\uc131",e,e,e,A.au(e,e,r,e,e,e,e,e,e,e,e,a?52:92,e,e,B.n,e,1,!0,e,-2,e,e,e,e,e,e),B.di)
 a=A.cC(e,f.a.c?14:18,e)
 q=(c.a===B.e?B.y:B.z).a4(0.78)
-q=A.at("Building reliable systems for the data-heavy era.",e,e,e,A.au(e,e,q,e,e,e,e,e,e,e,e,f.a.c?14:17,e,e,B.n,e,1.55,!0,e,e,e,e,e,e,e,e),B.di)
+q=A.at("Building reliable backend systems for data-heavy era.",e,e,e,A.au(e,e,q,e,e,e,e,e,e,e,e,f.a.c?14:17,e,e,B.n,e,1.55,!0,e,e,e,e,e,e,e,e),B.di)
 p=f.a
 o=A.cC(e,p.c?24:32,e)
 p=p.d
@@ -80303,7 +80303,14 @@ B.ST=new A.O("PyTorch","AI/Data",4293807148,"assets/devicons/pytorch-original.sv
 B.U4=new A.O("Rust","Language",4290199822,"assets/devicons/rust-original.svg")
 B.UW=new A.O("Scikit-learn","AI/Data",4294415134,"assets/devicons/scikitlearn-original.svg")
 B.Tg=new A.O("Semiconductor","Materials",4278237313,"assets/fontawesome/solid/microchip.svg")
-B.n0=s([B.UX,B.TJ,B.Us,B.TO,B.Uv,B.Ti,B.Uz,B.SO,B.Un,B.UV,B.ST,B.U4,B.UW,B.Tg],t.l)
+B.zzBk1=new A.O("Spring","Backend",4285379391,"assets/devicons/spring-original.svg")
+B.zzBk2=new A.O("FastAPI","Backend",4278228616,"assets/devicons/fastapi-original.svg")
+B.zzBk4=new A.O("Axum","Backend",4294926834,"assets/fontawesome/solid/server.svg")
+B.zzBk3=new A.O("Docker","Backend",4280588013,"assets/devicons/docker-original.svg")
+B.zzDb1=new A.O("PostgreSQL","Database",4282477025,"assets/fontawesome/solid/database.svg")
+B.zzDb2=new A.O("Redis","Database",4292622381,"assets/devicons/redis-original.svg")
+B.zzDb3=new A.O("MongoDB","Database",4282884680,"assets/devicons/mongodb-original.svg")
+B.n0=s([B.UX,B.TJ,B.Us,B.TO,B.Uv,B.Ti,B.Uz,B.SO,B.Un,B.UV,B.ST,B.U4,B.UW,B.Tg,B.zzBk1,B.zzBk4,B.zzBk2,B.zzBk3,B.zzDb1,B.zzDb2,B.zzDb3],t.l)
 B.bB=new A.eO(1,"fuchsia")
 B.K0=s([B.aK,B.bB,B.ax,B.bl,B.bm,B.bn],A.ae("v<eO>"))
 B.yt=new A.tN(0,"topLeft")
@@ -80371,9 +80378,9 @@ B.jA=new A.h9(7,"functionModifier")
 B.ta=new A.h9(8,"symbolModifier")
 B.n3=s([B.d1,B.d2,B.d3,B.d4,B.jx,B.jy,B.jz,B.jA,B.ta],A.ae("v<h9>"))
 B.jf=s([!0,!1],t.HZ)
-B.a03=new A.u_("Rust Developer",null)
-B.a04=new A.u_("Network App",null)
-B.a02=new A.u_("Backend Runtime",null)
+B.a03=new A.u_("Backend Engineer",null)
+B.a04=new A.u_("Distributed Systems",null)
+B.a02=new A.u_("Data Platform",null)
 B.L5=s([B.a03,B.a04,B.a02],t.p)
 B.L6=s(["pointerdown","pointermove","pointerleave","pointerup","pointercancel","touchstart","touchend","touchmove","touchcancel","mousedown","mousemove","mouseleave","mouseup","wheel"],t.s)
 B.n4=s([1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768,65536,131072,262144,524288,1048576,2097152,4194304,8388608,16777216,33554432,67108864,134217728,268435456,536870912,1073741824,2147483648],t.t)
