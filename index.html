@@ -11,7 +11,6 @@
 
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
 
   <style>
     #back-affordance{
@@ -86,6 +85,101 @@
 
       addEventListener('hashchange', function () { y = 0; render(); });
       render();
+    })();
+  </script>
+
+  <style>
+    #lang-gate{
+      position:fixed; inset:0; z-index:2147483001;
+      display:flex; align-items:center; justify-content:center; padding:16px;
+      background:#E4E7EA; color:#222832;
+      font:600 16px/1.4 A2Z,system-ui,sans-serif;
+    }
+    #lang-gate[hidden], #lang-toggle[hidden]{ display:none; }
+    #lang-gate p{ margin:0 0 24px; text-align:center; font-size:18px; }
+    #lang-gate .row{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+    #lang-gate button, #lang-toggle{
+      height:48px; padding:0 24px; box-sizing:border-box;
+      border:1.5px solid #222832; border-radius:999px;
+      background:rgba(255,255,255,.92); color:#222832;
+      font:600 16px/1 A2Z,system-ui,sans-serif; cursor:pointer;
+      transition:background .16s ease, color .16s ease;
+    }
+    #lang-gate button{ min-width:140px; }
+    #lang-toggle{
+      position:fixed; right:16px; bottom:16px; z-index:2147483000;
+      height:40px; padding:0 16px; font-size:14px;
+      backdrop-filter:blur(14px); box-shadow:0 8px 24px rgba(34,40,50,.14);
+    }
+    #lang-gate button:hover, #lang-toggle:hover{ background:#222832; color:#E4E7EA; }
+    #lang-gate button:focus-visible, #lang-toggle:focus-visible{ outline:3px solid #8B5CF6; outline-offset:3px; }
+    @media (prefers-color-scheme:dark){
+      #lang-gate{ background:#12161C; color:#E9ECF1; }
+      #lang-gate button, #lang-toggle{ background:rgba(18,22,28,.92); border-color:#E9ECF1; color:#E9ECF1; }
+      #lang-gate button:hover, #lang-toggle:hover{ background:#E9ECF1; color:#12161C; }
+    }
+  </style>
+  <div id="lang-gate" role="dialog" aria-modal="true" aria-labelledby="lang-gate-title" hidden>
+    <div>
+      <p id="lang-gate-title">언어를 선택하세요<br>Choose a language</p>
+      <div class="row">
+        <button type="button" data-lang="ko" lang="ko">한국어</button>
+        <button type="button" data-lang="en" lang="en">English</button>
+      </div>
+    </div>
+  </div>
+  <button id="lang-toggle" type="button" hidden></button>
+  <script>
+    // Picks main.dart.js (ko) or main.dart.en.js (en) before Flutter boots.
+    // ?lang=en|ko in the URL wins, so an English link can be shared directly.
+    // English strings live in i18n/en.json; rebuild with: node i18n/build-en.js
+    (function () {
+      function load() { try { return localStorage.getItem('lang'); } catch (e) { return null; } }
+      function save(l) { try { localStorage.setItem('lang', l); } catch (e) {} }
+      function valid(l) { return l === 'ko' || l === 'en'; }
+
+      var param = new URLSearchParams(location.search).get('lang');
+      if (valid(param)) save(param);
+      var lang = valid(param) ? param : load();
+
+      function start(l) {
+        window.PORTFOLIO_LANG = l;
+        document.getElementById('lang-gate').remove();
+        if (l === 'en') {
+          var back = document.getElementById('back-affordance');
+          back.setAttribute('aria-label', 'Back');
+          back.querySelector('span').textContent = 'Back';
+        }
+
+        var t = document.getElementById('lang-toggle');
+        t.textContent = l === 'en' ? '한국어' : 'English';
+        t.lang = l === 'en' ? 'ko' : 'en';
+        t.hidden = false;
+        t.onclick = function () {
+          save(l === 'en' ? 'ko' : 'en');
+          if (!param) return location.reload();
+          var u = new URL(location.href);
+          u.searchParams.delete('lang');
+          location.replace(u); // drop ?lang= so it can't override the new choice
+        };
+
+        var s = document.createElement('script');
+        s.src = 'flutter_bootstrap.js';
+        s.async = true;
+        document.body.appendChild(s);
+      }
+
+      if (valid(lang)) return start(lang);
+
+      var gate = document.getElementById('lang-gate');
+      gate.hidden = false;
+      gate.querySelectorAll('button').forEach(function (b) {
+        b.onclick = function () {
+          save(b.dataset.lang);
+          start(b.dataset.lang);
+        };
+      });
+      gate.querySelector('[data-lang="' + (/^ko/i.test(navigator.language) ? 'ko' : 'en') + '"]').focus();
     })();
   </script>
 </body>
