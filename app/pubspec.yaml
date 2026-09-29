@@ -1,0 +1,52 @@
+name: cho_os_portfolio
+description: "Cho Hosung portfolio (Flutter web)."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.2.0
+  pointer_interceptor: ^0.10.1
+  url_launcher: ^6.3.1
+  web: ^1.1.0
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/hosung.jpg
+    - assets/devicons/
+    - assets/fontawesome/brands/
+    - assets/fontawesome/solid/
+    - assets/remote/projects/architecture/
+    - assets/remote/projects/thumbnails/
+
+  fonts:
+    - family: A2Z
+      fonts:
+        - asset: assets/fonts/A2Z/A2Z-1Thin.ttf
+          weight: 100
+        - asset: assets/fonts/A2Z/A2Z-2ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/A2Z/A2Z-3Light.ttf
+          weight: 300
+        - asset: assets/fonts/A2Z/A2Z-4Regular.ttf
+          weight: 400
+        - asset: assets/fonts/A2Z/A2Z-5Medium.ttf
+          weight: 500
+        - asset: assets/fonts/A2Z/A2Z-6SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/A2Z/A2Z-7Bold.ttf
+          weight: 700
+        - asset: assets/fonts/A2Z/A2Z-8ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/A2Z/A2Z-9Black.ttf
+          weight: 900
