@@ -95,7 +95,7 @@ class _Intro extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Wrap(spacing: 10, runSpacing: 10, children: [for (final chip in aboutChips) _RoleChip(chip)]),
+        Wrap(spacing: 10, runSpacing: 10, children: _roleChips),
         SizedBox(height: mobile ? 22 : 30),
         Text(
           '조호성',
@@ -120,6 +120,14 @@ class _Intro extends StatelessWidget {
     );
   }
 }
+
+// Const on purpose, as in the original: const widgets are not rebuilt when the
+// theme flips, so these keep the colors of the mode the page first opened in.
+const _roleChips = [
+  _RoleChip('Backend Engineer'),
+  _RoleChip('Distributed Systems'),
+  _RoleChip('Data Platform'),
+];
 
 class _RoleChip extends StatelessWidget {
   const _RoleChip(this.text);

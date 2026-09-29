@@ -1385,8 +1385,3 @@ const List<LabelValue> statusItems = [
   LabelValue('FOCUS', 'RUST, DATA'),
 ];
 
-const List<String> aboutChips = [
-  'Backend Engineer',
-  'Distributed Systems',
-  'Data Platform',
-];

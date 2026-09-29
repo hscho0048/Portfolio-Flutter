@@ -401,7 +401,7 @@ class _Footer extends StatelessWidget {
           const SizedBox(width: 18),
           _FooterLink('email', onTap: openEmail),
           const SizedBox(width: 18),
-          Text('terminal_logs', style: style),
+          Text('terminal_logs', style: TextStyle(color: color, fontFamily: 'A2Z', fontSize: 10)),
         ],
       ),
     );
