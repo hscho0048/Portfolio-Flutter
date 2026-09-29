@@ -1,0 +1,16 @@
+# The repo root is the deployed site (GitHub Pages), so build files there
+# (main.dart.js, canvaskit/, assets/, ...) stay tracked on purpose.
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+*.log
+
+# Flutter source build output; copy app/build/web to the root to deploy
+app/build/
+app/.dart_tool/
+
+node_modules/

@@ -1,0 +1,11 @@
+{
+  "name": "SYS_INIT_v1.0.4 Portfolio",
+  "short_name": "SYS_INIT",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#061827",
+  "theme_color": "#f97316",
+  "description": "Terminal portfolio built with Flutter",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}
