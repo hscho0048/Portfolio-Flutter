@@ -41,6 +41,6 @@ if (window.PORTFOLIO_LANG === "en") _flutter.buildConfig.builds[0].mainJsPath = 
 
 _flutter.loader.load({
   serviceWorkerSettings: {
-    serviceWorkerVersion: "595642497"
+    serviceWorkerVersion: "3605884777"
   }
 });
